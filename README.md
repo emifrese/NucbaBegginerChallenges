@@ -1,3 +1,3 @@
---Main section
+# Main section
 
--Change branch to see challenges
+## Change branch to see challenges
