@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.75);
+}
+
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.modal {
+  animation-name: slideDown;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  border-radius: 20px;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: start;
+  top: 3rem;
+  width: 859px;
+  height: 928px;
+  z-index: 30;
+  text-align: center;
+  max-width: inherit;
+  max-height: 85%;
+  box-shadow: 0px 15px 45px -10px #587CB02E;
+}
+
+.titleContainer,
+.calendarToggleContainer,
+.appointmentsContainer {
+    width: 100%;
+}
+
+.titleContainer {
+    height: 125px;
+    background-color: #203774;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 41px;
+    color: #fff;
+}
+
+.titleContainer h1 {
+    font-weight: 400
+}
+
+.calendarToggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 192px;
+    gap: 30px;
+}
+
+.calendarToggleContainer button {
+    border: none;
+    cursor: pointer;
+}
+
+.calendarToggleContainer span {
+    font-size: 22px;
+}
+
+.calendarLegend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calendarLegend span {
+    width: 100%;
+    font-size: 36px;
+    color: #0F131C;
+}
+
+.calendarLegend #dateText {
+    font-size: 18px;
+}
+
+.appointmentsContainer {
+    height: 534px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.appointmentCard {
+    heigth: 245px;
+    width: 524px;
+    background-color: #203774;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 45px;
+    box-shadow: 0px 12px 27px -11px #002A9875;
+}
+
+.appointmentInfo, .appointmentButon {
+    width: 50%;
+}
+
+.appointmentDr, .appointmentInfo {
+    display: flex;
+}
+
+.appointmentInfo {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.appointmentInfo h3 {
+    width: 100%;
+    text-align: left;
+}
+
+.appointmentButton button {
+    width: 153px;
+    height: 53px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.appointmentDr{
+    width: 100%;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+    .modal {
+        width: 648px;
+        height: 700px;
+    }
+    .titleContainer {
+        height: 94px;
+        padding: 37px;
+    }
+    .calendarToggleContainer {
+        height: 176px;
+    }
+    .appointmentsContainer {
+        height: 430px;
+    }
+}
