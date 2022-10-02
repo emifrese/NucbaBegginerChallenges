@@ -12,26 +12,28 @@
 </head>
 
 <body>
+    <div class="warningMessage">Reduce the zoom</div>
     <div class="overlays" id="modal">
         <div class="backdrop"></div>
         <div class="modalContainer">
             <div class="modal" id="">
                 <div class="titleContainer">
                     <h1>Registrá tu turno</h1>
+                    <span id="day"></span>
                     <span class="material-symbols-outlined">
                         close
                     </span>
                 </div>
                 <div class="calendarToggleContainer">
                     <button>
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined" id="substract">
                             arrow_back_ios
                         </span></button>
-                    <div class="calendarLegend">
-                        <span>Sep. 24</span>
-                        <span id="dateText">hoy</span>
+                    <div class="calendarLegend" id="dateText">
+                        <span id="dateNumbers"></span>
+                        <!-- <span id="dateText"></span> -->
                     </div>
-                    <button><span class="material-symbols-outlined">
+                    <button><span class="material-symbols-outlined" id="add">
                             arrow_forward_ios
                         </span></button>
                 </div>
@@ -45,20 +47,20 @@
                             <button>Pedir Turno</button>
                         </div>
                         <div class="appointmentDr">
-                            <figcaption><img src="" alt=""></figcaption>
+                            <figcaption><img src="" alt="" id="firstPhoto"></figcaption>
                             <span>Dra. Emilia Díaz</span>
                         </div>
                     </div>
                     <div class="appointmentCard">
                         <div class="appointmentInfo">
                             <h3>Odontología</h3>
-                            <span>1.0:30 60 min</span>
+                            <span>10:30 60 min</span>
                         </div>
                         <div class="appointmentButton">
                             <button>Pedir Turno</button>
                         </div>
                         <div class="appointmentDr">
-                            <figcaption><img src="" alt=""></figcaption>
+                            <figcaption><img src="" alt="" id="secondPhoto"></figcaption>
                             <span>Dr. Erik Nest</span>
                         </div>
                     </div>
@@ -66,7 +68,7 @@
             </div>
         </div>
     </div>
-    <div class="container"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
