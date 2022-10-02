@@ -82,6 +82,7 @@
 .calendarToggleContainer button {
     border: none;
     cursor: pointer;
+    background: #fff;
 }
 
 .calendarToggleContainer span {
